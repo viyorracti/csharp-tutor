@@ -1,0 +1,1115 @@
+
+<!doctype html>
+<html lang="ko">
+
+<body id="searchmain">
+  
+  <form name="fmBzInfo" id="fmBzInfo">
+    <input type="hidden" name="service_cd" id="service_cd" value="www_unified_search" />
+    <input type="hidden" name="type" id="type" value="11" />
+    <input type="hidden" name="bz_yy" id="bz_yy"  />
+    <input type="hidden" name="bz_id" id="bz_id"  />
+  </form>
+  
+  <div id="bodyContentArea">
+  
+  <div id="globalMenuLayer" style="display:none;"></div>
+  <div id="globalUserMenuLayer" style="display: none;"></div>
+  
+  <div id="spinBar" style="display:none;position:fixed;_position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;filter:Alpha(opacity=60);opacity:0.5;z-index:300000 !important;"></div>
+
+  <input type="hidden" name="prtcpViewType" id="partcpViewType" />
+    
+  <input type="hidden" name="loginYn" id="loginYn" value="" />
+  
+    
+    <div id="searchmain_wrap">
+
+    <div class="globalHead">
+      <div class="g_nav">      
+        <a href="#none" id="headerGloblMenu" class="menu" title="NTIS 메뉴가 보입니다.">메뉴</a>
+        <span class="search"><a href="#" id="headerSearch" title="NTIS 통합 검색을 합니다.">검색</a><img src="/common/images/th/2014/arrow_searchtab.png" alt="1" id="search_tab" /></span>
+        
+          
+          
+            <a href="#" class="login" id="login" title="NTIS 로그인을 합니다. 새 창으로 열립니다.">로그인</a>
+          
+        
+      </div>
+      <a href="#" class="logo" id="ntisHome" title="국가과학기술지식정보서비스 홈으로 이동합니다.">NTIS 국가과학기술지식정보서비스</a>
+    </div> 
+    
+    <!-- S 통합검색-->
+    <div id="n_searchwrap">
+      <div class="n_searchwrap_in">
+        <!--
+        <input type="text" class="main_search" value="NTIS 통합검색"><input type="submit" class="btn_search_main" style="" value="검색">
+        -->
+        <!-- 운영버전 URL 변경 -->
+        <form name="searchForm" id="searchForm" action="http://www.ntis.go.kr/ThFastSearchTotalList.do" method="post">
+          <input type="text" name="pjtSearchWord" id="pjtSearchWord" class="main_search" title="NTIS 통합검색 검색어를 입력합니다." placeholder="NTIS 통합검색" /><input type="submit" class="btn_search_main" value="검색" title="검색합니다." />
+          <button type="button" class="ntis_global_search" id="btnDtlSearch">과제상세검색</button>
+          <input type="hidden" name="searchWord" id="searchWord" class="main_search"/>
+          <input type="hidden" name="encoding" value="utf-8"/>
+        </form>
+      </div>  
+    </div>
+    <!--E 통합검색 --> 
+    
+    <div id="divLogOutLayer" style="display: none;">
+      <div id="autoLogoutLayer"  style=" border:4px solid #dedede; width: 400px; margin:50px auto; padding:30px; min-height: 0px; max-height: none; height: auto; text-align:center; background:#fff; position:relative;">
+        <img src="/common/images/th/2014/ntislogo.gif" alt="" style="position:absolute; left:30px; top:0;">
+        <h1 style="margin-top:40px; margin-bottom:20px; border-bottom:1px solid #dedede;padding-bottom:10px; font-size:21px; text-align:center;">NTIS 로그인 연장 안내</h1>
+        <p style="font-size:14px; line-height:21px; margin-bottom:20px; color:#595959; text-align:center;">고객님의 안전한 이용을 위해,<br>로그인 후 약 30분 동안 서비스 이용이 없어 <br> 로그아웃 됩니다.</p>
+        <div id="timer" style="font-size:40px;  margin-bottom:20px; text-align:center;">00:24 초</div>
+        <p style="font-size:18px; color:#FC0105;  margin-bottom:30px; text-align:center;">로그인 시간을 연장하시겠습니까?</p> 
+        <div style=" text-align:center; margin-bottom:20px;">
+          <a href="http://sims.ntis.go.kr:80/pjtinfo/pjtMainInfo.do?pjtInfoVo.pjtId=1465012756" id="autoPopupContinueLogin" class="btn_green" style="width:200px; line-height:40px !important; font-size:16px !important;  "  title="로그인 시간을 연장합니다.">연장하기</a>
+        </div>
+        <div style=" text-align:center; margin-bottom:10px;">
+          <a href="https://sso2.ntis.go.kr/nls3/removeAllCookies2.jsp?uurl=http://sims.ntis.go.kr:80/pjtinfo/pjtMainInfo.do?pjtInfoVo.pjtId=1465012756" id="autoPopupLayerLogout" class="btn_line" style="width:200px;"  title="로그아웃 합니다.">로그아웃</a>
+        </div>
+      </div>
+    </div> 
+    
+    <div class="searchHead">
+      <div style="padding-top: 14px;"></div>
+      <h1>국가R&amp;D정보</h1>
+      <!--
+      <div class="history">전체검색 /  과제 / 인체자원 기반 유전자 프로파일링과 생체내 기능 연구<br/></div>
+      -->
+    </div>
+    <!-- 서비스 헤더 -->
+
+    <!-- 콘텐츠 바디 -->
+    <div class="searchpageBox">
+       <div class="" style="max-width: 1090px;  min-width: 980px;  margin:0 auto;">
+   
+       <div class="" style="position:relative; max-width: 980px;  margin:0 auto; overflow: hidden; padding-top:50px;">
+         <div class="researcher">
+         * 본 과제에 참여한 연구자
+          <div id="divPrtcpList" style="max-height:1233px; overflow-y: auto;">
+            <ul>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+            </ul>
+            <a href="#none" id="btnView" style="display:none;" class="toggle_down" title="본 과제에 참여한 연구자 목록을 모두 보여줍니다.">더보기</a>
+            <a href="#none" id="btnClose" class="toggle_up" title="본 과제에 참여한 연구자 목록을 연구책임자 포함 2명까지만 보여줍니다.">닫기</a>
+          </div>
+        </div> 
+        <!--S 사업 -->
+        <dl class="result_off"> <!-- class="result_on" -->
+        <dt>사업</dt>
+          <dd>2013 /  보건복지부 /
+            
+              
+              
+              
+              
+                일반사업
+              
+            
+            <br/>
+            <div style="width:698px;">
+              <a href="#none" id="bzTitle">질환극복기술개발 (조사분석사업명 : 질환극복기술개발)</a>              
+            </div>
+          </dd>
+        </dl>
+        <!--E 사업 -->   
+        
+        <!--S 과제 -->  
+        <dl class="result_on">
+           <dt>과제</dt>
+           <dd>
+            <span class="head">
+              인체자원 기반 유전자 프로파일링과 생체내 기능 연구
+            </span>
+            1465012756  /  서울대학교병원  /
+            
+              
+                주관과제
+              
+              
+              /
+            총 연구비 350.0 백만원
+            
+              <br/>과학기술표준 분류 1 : 뇌과학
+              
+                &nbsp;/&nbsp;뇌의약
+              
+              
+              &nbsp;/&nbsp;100%
+            
+            
+          </dd>
+        </dl>
+
+        <div class="task_info">
+        
+          
+          
+            
+              
+              
+                <a href="#none" id="pjtView"><span class="v_tab info01 on" id="sPjtView" title="과제의 상세정보를 조회합니다.">상세정보</span></a>
+                
+                  
+                    <a href="#none" id="summaryView"><span class="v_tab info02" id="sSummaryView" title="과제의 요약서 정보를 조회합니다.">요약서</span></a>
+                  
+                  
+                
+                
+                  
+                    <span class="disable info03">위탁과제</span>
+                  
+                  
+                
+                
+                  
+                    <span class="disable info04">공동연구</span>
+                  
+                  
+                
+                
+                  
+                  
+                    <a href="#none" id="prtcpView"><span class="v_tab info05" id="sPrtcpView" title="과제의 참여연구원 정보를 조회합니다.">참여연구원</span></a>
+                  
+                
+                <!--
+                
+                  
+                    <span class="disable info06">평가가감점</span>
+                  
+                  
+                
+                -->
+              
+            
+          
+          
+          
+  <form name="pjtInfoForm" id="fmPjtMain" method="post" action="/pjtinfo/pjtMainInfo.do;jsessionid=HoFfV45SdcuzJdzddO6QrssudtK39q5cDiav7VAiAt1qoPVgOFXN8uhaXYxC5vNR">    
+    <!-- 과제 상세정보 시작 -->    
+    <div class="info_box" id="divMain" style="display:;">
+      
+      
+            
+      <table class="table5">
+        <tbody>
+          <tr>
+            <th colspan="2" class="tr" style="width: 20%">과제고유번호</th>
+            <td  style="width: 30%">1465012756</td>
+            <th class="tr" style="width: 20%">당해년도 연구기간</th>
+            <td  style="width: 30%">2013-04-01 ~ 2014-03-31</td>
+          </tr>
+          <tr>
+            <th colspan="2" class="tr">(기관)세부과제번호</th>
+            <td >HI12C0066010013</td>
+            <th class="tr">총연구기간</th>
+            <td >2012-05-01 ~ 2018-03-31</td>
+          </tr>
+          <tr>
+            <th colspan="2" class="tr">
+              
+                
+                대과제명
+              
+            </th>
+            <td  colspan="3">소아청소년 뇌신경계 희귀질환 집중연구센터</td>
+          </tr>
+          <tr>
+            <th class="tr" style="width: 14%" rowspan="2">과제명</th>
+            <th class="tr" style="width: 6%">국문</th>
+            <td  colspan="3">인체자원 기반 유전자 프로파일링과 생체내 기능 연구</td>
+          </tr>
+          <tr>
+            <th class="tr" style="width: 6%">영문</th>
+            <td  colspan="3">Genetic Profiling and Functional Analyses Based on Human Tissues</td>
+          </tr>
+          <tr>
+            <th colspan="2" class="tr">과제수행기관</th>
+            <td  colspan="3">서울대학교병원</td>
+          </tr>
+          <tr>
+            <th colspan="2" class="tr">연구관리전문기관</th>
+            <td >한국보건산업진흥원</td>
+            <th class="tr">과제관리(전문)기관</th>
+            <td >한국보건산업진흥원</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      
+        
+        
+          <table class="table5">
+            <caption>총연구비 세부내역(단위 : 백만원)</caption>
+            <tbody>
+              <tr>
+                <th class="tc">인건비</th>
+                <th class="tc">직접비</th>
+                <th class="tc">간접비</th>
+                <th class="tc">위탁연구비</th>
+                <th class="tc">물건비</th>
+                <th class="tc">계</th>
+              </tr>
+              <tr>
+                <td class="tr" style="width: 16%">75.84</td>
+                <td class="tr" style="width: 16%">250.16</td>
+                <td class="tr" style="width: 16%">24.0</td>
+                <td class="tr" style="width: 16%">0.0</td>
+                <td class="tr" style="width: 16%">0.0</td>
+                <td class="tr" style="width: 20%">350.0</td>
+              </tr>
+            </tbody>  
+          </table>
+        
+      
+                           
+      <table class="table5">
+        <caption>총연구비(단위 : 백만원)</caption>
+        <tbody>
+          <tr>
+            <th class="tc" rowspan="2">정부 연구비</th>
+            <th class="tc" colspan="2">민간 연구비</th>
+            <th class="tc" rowspan="2">계</th>
+          </tr>
+          <tr>
+            <td class="tc">현금</td>
+            <td class="tc">현물</td>
+          </tr>
+          <tr>
+            <td class="tr" style="width: 25%">200.0</td>
+            <td class="tr" style="width: 25%">30.0</td>
+            <td class="tr" style="width: 25%">120.0</td>
+            <td class="tr" style="width: 25%">350.0</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      
+      <table class="table5">
+        <tbody>
+          <tr>
+            <th class="tr" style="width: 20%">과제진행상태</th>
+            <td  style="width: 30%">
+              
+                
+                
+                  
+                    
+                    종료
+                  
+                
+              
+            </td>
+            <th class="tr" style="width: 20%">보안과제여부</th>
+            <td  style="width: 30%">
+              
+                
+                아니오
+              
+            </td>
+          </tr>
+          <tr>
+            <th class="tr">실용화대상여부</th>
+            <td>실용화비대상</td>
+            <th class="tr">보안과제 해제년월</th>
+            <td>
+              
+                
+                -
+              
+            </td>
+          </tr>
+          <tr>
+            <th class="tr">연구개발단계</th>
+            <td>응용연구</td>
+            <th class="tr">연구수행주체</th>
+            <td>대학</td>
+          </tr>
+          <tr>
+            <th class="tr">세부과제성격</th>
+            <td>연구개발</td>
+            <th class="tr">연구개발성격</th>
+            <td>기타개발</td>
+          </tr>
+          <tr>
+            <th class="tr">기술수명주기</th>
+            <td>도입기</td>
+            <th class="tr">지역</th>
+            <td>서울특별시</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table5">
+        <tbody>
+                    
+          <tr>
+            
+              <th class="tr" style="width: 20%">
+                
+                
+                  과학기술표준분류(신)<br/>12년도 개편
+                
+              </th>
+              <td style="width: 80%">
+                
+                  
+                    
+                    
+                      뇌과학
+                      
+                        / 뇌의약
+                      
+                      
+                    
+                    &nbsp;(100%)
+                                                
+                  
+                  
+                
+              </td>
+            
+          </tr>
+          <tr>
+            <th class="tr">적용분야</th>
+            <td>
+              
+                건강 (100%)
+                
+                
+              
+            </td>
+          </tr>                        
+          <tr>
+            <th class="tr">6T 관련 기술</th>
+            <td>난치성 질환 치료기술</td>
+          </tr>                        
+          <tr>
+            <th class="tr">
+              NTRM
+              
+            </th>
+            <td>생체정보 분석·활용 기술</td>
+          </tr>
+          <tr>
+            <th class="tr">공동연구여부</th>
+            <td>
+              
+                
+                <input type="checkbox" style="vertical-align: middle;" title="공동연구여부 기업"/>
+              
+              기업
+              
+                
+                <input type="checkbox" style="vertical-align: middle;" title="공동연구여부 대학"/>
+              
+              대학
+              
+                
+                <input type="checkbox" style="vertical-align: middle;" title="공동연구여부 국공립(연),출연(연)"/>
+              
+              국공립(연),출연(연)
+              
+                
+                <input type="checkbox" style="vertical-align: middle;" title="공동연구여부 외국연구기관"/>
+              
+              외국연구기관
+              
+                
+                <input type="checkbox" style="vertical-align: middle;" title="공동연구여부 기타"/>
+              
+              기타
+            </td>
+          </tr>
+        </tbody>
+      </table>                       
+        </div>
+        <!-- 과제 상세정보 끝 -->
+        
+        <!-- 과제 요약서정보 시작 -->
+        <div class="info_box" id="divSummary" style="display:none;">
+          <table class="table5">
+        <tbody>
+        <tr>
+          <th class="tl" colspan="2">연구목표</th>
+        </tr>
+        <tr>
+          <td class="view_p30" colspan="2">            
+            ▶ 인체자원을 이용한 연구 플랫폼의 구축과 활용 
+▶ 모야모야병의 유전자 프로파일링을 통한 key signaling pathway의 규명 
+▶ 모야모야병의 간편한 진단 kit의 개발 
+▶ 모야모야병에서 혈관내피세포와 signal-modifying molecule의 치료효과의 발견 
+▶ 뇌발달기형 조직의 유전자 프로파일링과 단백질체 분석 
+▶ 뇌발달기형 뇌조직에서 유래한 신경줄기세포의 특성분석 
+▶ 뇌발달기형에 특이적인 표적 영상의 개발
+          </td>
+        </tr>
+        <tr>
+          <th class="tl" colspan="2">연구내용</th>
+        </tr>
+        <tr>
+          <td class="view_p30" colspan="2">
+            ▶ 인체자원을 이용한 연구 플랫폼의 구축과 활용: 기존의 질환 조직bank를 기반으로 다수의 뇌신경계 희귀질환에 대하여 각 세부과제 연구팀에 인체자원을 제공하고 연구 플랫폼을 구축 
+▶ 모야모야병의 유전자 프로파일링을 통한 key signaling pathway의 규명: 모야모야병 환자의 혈관전구세포에서 유전자 프로파일링을 통하여 병인에 관여하는 유전자를 발견하고 모야모야병의 key signaling pathway를 밝혀냄 
+▶ 모야모야병의 간편한 진단 kit의 개발: 고비용의 영상검사법을 대신할 수 있는 소변을 이용한 실용적이고 안전한 진단 kit의 개발 
+▶ 모야모야병에서 혈관내피세포와 signal-modifying molecule의 치료효과의 발견: 혈관내피세포 또는 key signaling pathway를 변형시키는 분자의 투여로 모야모야병의 치료가능성을 세포모델실험과 동물실험에서 확인 
+▶ 뇌발달기형 조직의 유전자 프로파일링과 단백질체 분석: 특정 뇌발달기형 발생에 관여하는 유전자와 주요 signaling pathway의 발견 
+▶ 뇌발달기형 뇌조직에서 유래한 신경줄기세포의 특성분석: 특정 뇌발달기형에서 신경줄기세포를 배양하여 질환 특이적인 신경줄기세포의 분화 특성의 규명 
+▶ 뇌발달기형에 특이적인 표적 영상의 개발: 뇌발달기형에 특이적으로 발현되는 단백질을 target으로 하는 표적 영상을 개발하여 새 진단기법으로 발전시킴
+          </td>
+        </tr>
+        <tr>
+          <th class="tl" colspan="2">기대효과</th>
+        </tr>
+        <tr>
+          <td class="view_p30" colspan="2">
+            ▶ 모야모야병의 병인기전의 발견 
+▶ 모야모야병의 치료제개발의 전임상실험 단계완료 
+▶ 뇌발달기형을 일으키는 유전자의 발견 
+▶ 뇌발달기형에 특이적인 표적영상의 개발
+          </td>
+        </tr>
+        <tr>
+          <th class="tr" style="width: 80px">한글 키워드</th>
+          <td class="view_p30">인체자원,희귀질환,신경계질환,모야모야병,뇌발달기형</td>
+        </tr>
+        <tr>
+          <th class="tr">영문 키워드</th>
+          <td class="view_p30">Human tissue,Rare disease,Nervous system disease,Moyamoya disease,Developmental brain malformation</td>
+        </tr>
+        </tbody>
+      </table>               
+        </div>
+        <!-- 과제 요약서정보 끝 -->
+        
+        <!-- 과제 위탁과제정보 시작 -->
+        <div class="info_box" id="divCm" style="display:none;">
+          <table class="table5">
+               <caption style="text-align: right">단위 : 백만원</caption>
+              <tbody>
+                  <tr>
+                      <th class="tc" style="width: 7%">순번</th>
+                      <th class="tc" style="width: 36%">위탁과제명</th>
+                      <th class="tc" style="width: 10%">참여국가</th>
+                      <th class="tc" style="width: 21%">수행기관명</th>
+                      <th class="tc" style="width: 15%">당해년도<br/>위탁과제 연구비</th>
+                      <th class="tc" style="width: 11  %">연구책임자</th>
+                  </tr>
+                  
+                    
+                       <tr>
+                <td class="tc" colspan="6">위탁과제 정보가 없습니다.</td>
+                       </tr>
+            
+            
+          
+              </tbody>
+          </table>
+
+            <table class="table5" id="tbCmPrtcp" style="margin-top:30px;">
+        <caption>참여연구원 정보</caption>
+        <tbody>
+          <tr>
+            <th class="tc" rowspan="2" style="width: 7%">순번</th>
+            <th class="gubun" rowspan="2" style="width: 36%">위탁과제명</th>
+            <th class="tc" rowspan="2" style="width: 12%">역할 구분</th>
+            <th class="tc" rowspan="2" style="width: 15%">성명<br/>(인력정보상세)</th>
+            <th class="tc" colspan="2">참여기간</th>
+            <th class="tc" rowspan="2" style="width: 10%">참여율<br/>(%)</th>
+          </tr>
+          <tr>
+            <th class="tc" style="width: 10%">시작일</th>
+            <th class="tc" style="width: 10%">종료일</th>
+          </tr>
+          
+                    
+                       <tr>
+                <td class="tc" colspan="7">참여연구원 정보가 없습니다.</td>
+                       </tr>
+            
+            
+          
+          <tr>
+            <td colspan="7">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="7" style="text-align: left">
+              * 참여율 값은 검증되지 않은 값이며, 입력한 데이터가 없는 경우 참여율 항목은 공란으로 표시됩니다.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+         </div>
+         <!-- 과제 위탁과제정보 끝 -->
+         
+         <!-- 과제 공동연구정보 시작 -->
+         <div class="info_box" id="divCo" style="display:none;">
+             <table class="table5">
+                 <caption style="text-align: right">단위 : 백만원</caption>                     
+                 <tbody>
+                     <tr>
+                         <th class="tc" rowspan="2">순번</th>
+                         <th class="tc" rowspan="2">참여국가</th>
+                         <th class="tc" rowspan="2">참여형태</th>
+                         <th class="tc" rowspan="2">수행기관명</th>
+                         <th class="tc" colspan="2">공동연구비</th>
+                     </tr>
+                     <tr>
+                         <th class="tc" style="width: 15%">지출</th>
+                         <th class="tc" style="width: 15%">수입</th>
+                     </tr>                    
+                     
+              
+                <tr>
+                  <td class="tc" colspan="6">공동연구 정보가 없습니다.</td>
+                </tr>
+              
+              
+            
+                 </tbody>
+            </table>
+
+      <table class="table5" id="tbCoPrtcp" style="margin-top:30px;">
+        <caption>참여연구원 정보</caption>
+        <tbody>
+          <tr>
+            <th class="tc" rowspan="2" style="width: 8%">순번</th>
+            <th class="tc" rowspan="2" style="width: 41%">수행기관명</th>
+            <th class="tc" rowspan="2" style="width: 15%">성명<br/>(인력정보상세)</th>
+            <th class="tc" colspan="2">참여기간</th>
+            <th class="tc" rowspan="2" style="width: 12%">참여율<br/>(%)</th>
+          </tr>
+          <tr>
+            <th class="tc" style="width: 12%">시작일</th>
+            <th class="tc" style="width: 12%">종료일</th>
+          </tr>
+          
+                    
+                       <tr>
+                <td class="tc" colspan="6">참여연구원 정보가 없습니다.</td>
+                       </tr>
+            
+            
+          
+          <tr>
+            <td colspan="6">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="6" style="text-align: left">
+              * 참여율 값은 검증되지 않은 값이며, 입력한 데이터가 없는 경우 참여율 항목은 공란으로 표시됩니다.
+            </td>
+          </tr>
+        </tbody>
+      </table>                                     
+        </div>
+        <!-- 과제 공동연구정보 끝 -->
+        
+        <!-- 과제 참여연구원정보 시작 -->
+        <div class="info_box" id="divPrtcp" style="display:none;">
+          <table class="table5">
+        <tbody>
+          <tr>
+            <th class="tc" colspan="2">성별(명)</th>
+            <th class="tc" colspan="3">학위별(명)</th>
+            <th class="tc" colspan="6">전공별(명)</th>
+            <th class="tc" rowspan="2" style="width: 12%">총인원<br/>(명)</th>
+          </tr>
+          <tr>
+            <th class="tc" style="width: 8%">남</th>
+            <th class="tc" style="width: 8%">여</th>
+            <th class="tc" style="width: 8%">박사</th>
+            <th class="tc" style="width: 8%">석사</th>
+            <th class="tc" style="width: 8%">학사</th>
+            <th class="tc" style="width: 8%">이학</th>
+            <th class="tc" style="width: 8%">공학</th>
+            <th class="tc" style="width: 8%">농림<br/>수산학</th>
+            <th class="tc" style="width: 8%">의약<br/>보건학</th>
+            <th class="tc" style="width: 8%">인문<br/>사회</th>
+            <th class="tc" style="width: 8%">기타</th>
+          </tr>
+          <tr>
+            <td class="tc">1</td>
+            <td class="tc">5</td>
+            <td class="tc">2</td>
+            <td class="tc">4</td>
+            <td class="tc">0</td>
+            <td class="tc">2</td>
+            <td class="tc">1</td>
+            <td class="tc">0</td>
+            <td class="tc">2</td>
+            <td class="tc">0</td>
+            <td class="tc">1</td>
+            <td class="tc">6</td>
+          </tr>
+        </tbody>
+      </table>
+                                  
+            <table class="table5" id="tbPrtcp" style="margin-top:30px;">
+        <tbody>
+          <tr>
+            <th class="tc" rowspan="2">순번</th>
+            <th class="tc" rowspan="2">역할 구분</th>
+            <th class="tc" rowspan="2">성명<br/>(인력정보상세)</th>
+            <th class="tc" rowspan="2">성별</th>
+            <th class="tc" rowspan="2">전공계열<br/>구분</th>
+            <th class="tc" colspan="2">참여기간</th>
+            <th class="tc" rowspan="2">참여율<br/>(%)</th>
+          </tr>
+          <tr>
+            <th class="tc" >시작일</th>
+            <th class="tc" >종료일</th>
+          </tr>  
+          
+            
+            
+              
+              
+                <tr>
+                  
+                    
+                    
+                      <td class="tc">1</td>
+                      <td class="tc">
+                        
+                          연구책임자
+                          
+                        
+                      </td>
+                      <td class="tc"><a href="#none" hmId="ntis:B551186-B551186>HMO.605186126783">김승기</a></td>
+                      <td class="tc">
+                        
+                          남자
+                          
+                          
+                        
+                      </td>
+                      <td class="tc">
+                        
+                          
+                          공학
+                        
+                      </td>  
+                    
+                  
+                  <td class="tc">
+                    
+                      
+                      2013-04-01
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      2014-03-31
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      100
+                    
+                  </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    
+                    
+                      <td class="tc">2</td>
+                      <td class="tc">
+                        
+                          
+                          참여연구원
+                        
+                      </td>
+                      <td class="tc"><a href="#none" hmId="ntis:B551186-B551186>HMO.437218618207">곽필애</a></td>
+                      <td class="tc">
+                        
+                          
+                          여자
+                          
+                        
+                      </td>
+                      <td class="tc">
+                        
+                          
+                          인문사회학
+                        
+                      </td>  
+                    
+                  
+                  <td class="tc">
+                    
+                      
+                      2013-04-01
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      2014-03-31
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      20
+                    
+                  </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    
+                    
+                      <td class="tc">3</td>
+                      <td class="tc">
+                        
+                          
+                          참여연구원
+                        
+                      </td>
+                      <td class="tc"><a href="#none" hmId="ntis:B551186-B551186>HMO.403201548897">문연주</a></td>
+                      <td class="tc">
+                        
+                          
+                          여자
+                          
+                        
+                      </td>
+                      <td class="tc">
+                        
+                          
+                          공학
+                        
+                      </td>  
+                    
+                  
+                  <td class="tc">
+                    
+                      
+                      2013-04-01
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      2014-03-31
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      20
+                    
+                  </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    
+                    
+                      <td class="tc">4</td>
+                      <td class="tc">
+                        
+                          
+                          참여연구원
+                        
+                      </td>
+                      <td class="tc"><a href="#none" hmId="ntis:B551186-B551186>HMO.415251028711">엄다영</a></td>
+                      <td class="tc">
+                        
+                          
+                          여자
+                          
+                        
+                      </td>
+                      <td class="tc">
+                        
+                          
+                          인문사회학
+                        
+                      </td>  
+                    
+                  
+                  <td class="tc">
+                    
+                      
+                      2013-04-01
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      2014-03-31
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      20
+                    
+                  </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    
+                    
+                      <td class="tc">5</td>
+                      <td class="tc">
+                        
+                          
+                          참여연구원
+                        
+                      </td>
+                      <td class="tc"><a href="#none" hmId="ntis:B551186-B551186>HMO.143105067293">이은선</a></td>
+                      <td class="tc">
+                        
+                          
+                          여자
+                          
+                        
+                      </td>
+                      <td class="tc">
+                        
+                          
+                          이학
+                        
+                      </td>  
+                    
+                  
+                  <td class="tc">
+                    
+                      
+                      2013-04-01
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      2014-03-31
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      20
+                    
+                  </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                    
+                    
+                      <td class="tc">6</td>
+                      <td class="tc">
+                        
+                          
+                          참여연구원
+                        
+                      </td>
+                      <td class="tc"><a href="#none" hmId="ntis:B551186-B551186>HMO.730400837299">최승아</a></td>
+                      <td class="tc">
+                        
+                          
+                          여자
+                          
+                        
+                      </td>
+                      <td class="tc">
+                        
+                          
+                          기타
+                        
+                      </td>  
+                    
+                  
+                  <td class="tc">
+                    
+                      
+                      2013-04-01
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      2014-03-31
+                    
+                  </td>
+                  <td class="tc">
+                    
+                      
+                      20
+                    
+                  </td>
+                  
+                </tr>
+              
+            
+          
+          <tr>
+            <td colspan="8">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="8" style="text-align: left">
+              * 참여율 값은 검증되지 않은 값이며, 입력한 데이터가 없는 경우 참여율 항목은 공란으로 표시됩니다.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <!-- 과제 참여연구원정보 끝 -->
+    <!--
+    <div class="info_box" id="divAdsub" style="display:none;">
+      <table class="table5">
+        <caption>&nbsp;</caption>
+        <tbody>
+          <th class="tc" style="width: 10%">순번</th>
+          <th class="tc" style="width: 20%">성명<br/>(인력정보상세)</th>
+          <th class="tc" style="width: 50%">가감점사유</th>
+          <th class="tc" style="width: 20%">가감점발생일</th>
+        </tbody>
+        
+          
+            <tr>
+              <td class="tc" colspan="5">평가가감점 정보가 없습니다.</td>
+            </tr>
+          
+          
+        
+      </table>
+    </div>
+    -->
+  </form>
+
+          
+          <table class="table5" id="tbPreNext"  style="margin-top:30px;">
+            <tbody>
+              <tr>
+                
+                  
+                    <td style="vertical-align:top; width:478px;">
+                      <ul class="r_task">
+                        <li class="hd"><span class="ht">이전과제</span></li>
+                        
+                          
+                          
+                            
+                              <li> 1. <a href="#none" onclick="goPjtView('1465011387')" title="이전과제인 '인체자원 기반 유전자 프로파일링과 생체내 기능 연구'의 과제정보를 조회합니다.">2012 / 인체자원 기반 유전자 프로파일링과 생체내 기능 연구</a></li>
+                            
+                          
+                        
+                      </ul>
+                    </td>
+                    <td  style="vertical-align:top;width:478px;">
+                      <ul class="r_task">
+                        <li class="hd"><span class="ht">후속과제</span></li>
+                        
+                          
+                          
+                            
+                              <li> 1. <a href="#none" onclick="goPjtView('1465015239')" title="후속과제인 '인체자원 기반 유전자 프로파일링과 생체내 기능 연구'의 과제정보를 조회합니다.">2014 / 인체자원 기반 유전자 프로파일링과 생체내 기능 연구</a></li>
+                            
+                          
+                        
+                      </ul>
+                    </td>
+                  
+                  
+                  
+                
+              </tr>
+            </tbody>
+          </table>
+          <!--
+          <table class="table5" id="tbPjtList"  style="margin-top:30px; width: 1000px;">
+            <tbody>
+              <tr>
+                <td style="vertical-align:top;">
+                  <div id="divContPjtList"></div>
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align:top;">
+                  <div id="divPrtcpPjtList"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          -->
+          
+        </div>
+        <!--E 과제 --> 
+          
+        <!--S 성과 -->
+        
+          <div id="divOutcomeList" style="padding-bottom: 25px;"></div>
+        
+        
+        <div style="text-align: right;">
+          
+            <a href="#none" class="btn_blue" id="btnList" title="목록으로 이동합니다."><span>목록</span></a>
+          </div>
+          <br/>
+      </div>
+    </div>
+     </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div class="globalFoot">
+    <div class="footWrap">
+      <div class="footMenu">
+        <a href="http://www.ntis.go.kr/ThPrivacyAgreement.do" title="개인정보처리방침 페이지로 이동합니다."><font color="#ffffff">개인정보처리방침</font></a> /
+        <a href="http://www.ntis.go.kr/ThCopyrightPolicy.do" title="저작권정책 페이지로 이동합니다."><font color="#ffffff">저작권정책</font></a> / 
+        <a href="http://www.ntis.go.kr/ThEmailSecurity.do" title="이메일주소집단수집거부 페이지로 이동합니다."><font color="#ffffff">이메일주소집단수집거부</font></a> / 
+        <a href="http://www.ntis.go.kr/ThTerms.do" title="이용약관 페이지로 이동합니다."><font color="#ffffff">이용약관</font></a> / 
+        <a href="http://www.ntis.go.kr/ThCallCenter.do" title="콜센터 페이지로 이동합니다."><font color="#ffffff">콜센터</font></a> / 
+        <a href="http://www.ntis.go.kr/ThSiteMap.do" title="사이트맵 페이지로 이동합니다."><font color="#ffffff">사이트맵</font></a> / 
+        <a href="http://www.ntis.go.kr/en/GpIndex.do" title="사이트맵 페이지로 이동합니다."><font color="#ffffff">English</font></a>
+      </div>
+      <div class="copyright">Copyright (c) Ministry of Science, ICT &amp; Future Planning. All rights reserved.</div>      
+    </div>
+  </div>
+  
+  
+  
+  <div id="dialogMessage" style="display: none;">
+    <table>
+      <tr>
+        <td style="height: 80;"><div id="scriptMsg"></div></td>
+      </tr>
+    </table>
+  </div>
+  
+  <div id="dialogConfirm" style="display: none;" title="스크랩 등록">
+    <table>
+      <tr>
+        <td style="height: 80;"><div id="scriptConfirmMsg"></div></td>
+      </tr>
+    </table>
+  </div>
+  </div>
+  
+  <input type="hidden" name="userId" id="userId" value=""/>
+  <input type="hidden" name="korPjtNm" id="korPjtNm" value="인체자원 기반 유전자 프로파일링과 생체내 기능 연구" />
+  <input type="hidden" name="stanYr" id="stanYr" value="2013" />
+  <input type="hidden" name="pjtId" id="pjtId" value="1465012756" />
+  <input type="hidden" name="rschMngrNm" id="rschMngrNm" value="김승기" />
+  
+  <div id="divScrap" style="display: none;" />
+</body>
+</html>
+
+
